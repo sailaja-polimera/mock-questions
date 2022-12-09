@@ -1,0 +1,16 @@
+question: assign array of pointers to ""red"",""blue"",""Yellow"
+
+
+#include <stdio.h>
+
+int main()
+{
+   char *ptr[]={"red","blue","Yellow"};
+   int l=sizeof(ptr)/sizeof(ptr[0]);
+   printf("%d ",l);
+  for(int i=0;i<l;i++)
+  {
+  printf("%s ",ptr[i]);
+  }
+    return 0;
+}
