@@ -31,6 +31,6 @@ strcpy(max,s[0]);
         strcpy(max,s[k]);
     }
 }
-printf("%s %s",min,max);
+printf("The max and min words in a string are:%s %s",min,max);
 return 0;
 }
