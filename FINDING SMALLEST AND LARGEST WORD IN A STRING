@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char str[]="Iam working in Thundersoft";
+   char s[100][100],min[100],max[100];
+   int i=0,j=0;
+   int l=strlen(str);
+   for(int k=0;k<l;k++)
+   {
+       if(str[k]!=32 && str[k]!='\0')
+       s[i][j++]=str[k];
+       else
+       {
+           s[i][j]=str[k];
+           i++;
+           j=0;
+       }
+   }
+   l=i+1;
+strcpy(min,s[0]);
+strcpy(max,s[0]);
+   for(int k=0;k<l;k++)
+{
+    if(strlen(min)>strlen(s[k]))
+    {
+        strcpy(min,s[k]);
+    }
+    else if(strlen(max)<strlen(s[k]))
+    {
+        strcpy(max,s[k]);
+    }
+}
+printf("%s %s",min,max);
+return 0;
+}
