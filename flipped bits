@@ -15,3 +15,52 @@ int main()
       printf("%d",count);
     return 0;
 }
+
+method 2:
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,r1,r2,count=0,ar[8],br[8];
+    printf("eneter the values:");
+    scanf("%d %d",&a,&b);
+    while(a>0&&b>0)
+    {
+        for(int i=0;i<8;i++)
+        {
+        ar[i]=a%2;
+        br[i]=b%2;
+        a=a/2;
+        b=b/2;
+         }
+    }
+     for(int i=0;i<8;i++)
+    {
+         if(ar[i]^br[i]==1)
+             count++;
+    }  
+    printf("%d",count);
+    return 0;
+    
+    method 3:
+    
+    #include <stdio.h>
+#include<string.h>
+int main()
+{
+    int a,b ,count=0,num=10,num1=20;
+    for(int i=0;i<8;i++)
+    {
+      a=(num>>i)&1;
+      b=(num1>>i)&1;
+      if(a^b==1)
+      {
+        count++;
+      }
+    
+    }
+      printf("%d",count);
+    
+    return 0;
+}
