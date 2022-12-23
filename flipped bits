@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    int a,b ,count=0,num=5,num1=7;
+    for(int i=0;i<8;i++)
+    {
+      a=(num>>i)&1;
+      b=(num1>>i)&1;
+      if(a!=b)
+      {
+        count++;
+      }
+    }
+      printf("%d",count);
+    return 0;
+}
